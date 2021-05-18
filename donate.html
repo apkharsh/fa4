@@ -111,9 +111,30 @@
               <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-money"
                     style="font-size: 24px;"></i></span></div><input type="text">
             </div>
-            <button type="submit" class="btn btn-primary">
-              Donate
-            </button>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+              <!-- Identify your business so that you can collect the payments. -->
+              <input type="hidden" name="business"
+                  value="donations@kcparkfriends.org">
+          
+              <!-- Specify a Donate button. -->
+              <input type="hidden" name="cmd" value="_donations">
+          
+              <!-- Specify details about the contribution -->
+              <input type="hidden" name="item_name" value="Friends of the Park">
+              <input type="hidden" name="item_number" value="Fall Cleanup Campaign">
+              <input type="hidden" name="currency_code" value="USD">
+          
+              <!-- Display the payment button. -->
+            
+              <button type="submit" class="btn btn-primary" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif">
+                Donate
+              </button>
+          
+          </form>
+
+
             <div class="btn-group btn-group-toggle" data-toggle="buttons"></div>
           </div>
         </div>
